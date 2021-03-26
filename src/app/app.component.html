@@ -1,0 +1,32 @@
+<div class="timer-main" align="center" >
+  <table>
+    <tr>
+      <th>HH</th>
+      <th>MM</th>
+      <th>SS</th>
+    </tr>
+    <tr>
+      <td>{{this.timeHH}}</td>
+      <td>{{this.timeMM}}</td>
+      <td>{{this.timeSS}}</td>
+    </tr>
+    <tr>
+      <td *ngIf="start">
+        <button mat-raised-button color="warn" (click)="OnStart($event)">
+          СТОП </button>
+      </td>
+      <td *ngIf="!start">
+        <button mat-raised-button color="warn" (click)="OnStart($event)">
+          ПУСК </button>
+      </td>
+      <td>
+        <button mat-raised-button color="accent" (click)="ResetDbCl()">Сброс </button>
+      </td>
+      <td>
+        <button mat-raised-button (click)="Wait($event)">Пауза </button>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
