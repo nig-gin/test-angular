@@ -33,7 +33,7 @@ export class AppComponent {
       const stream$ = new Observable(observer => {
         setInterval(() => {
           observer.next();
-        }, 50);
+        }, 1000);
       });
       this.sub = stream$
         .subscribe(value => {
