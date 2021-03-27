@@ -33,7 +33,7 @@ export class AppComponent {
       const stream$ = new Observable(observer => {
         setInterval(() => {
           observer.next();
-        }, 1000);
+        }, 50);
       });
       this.sub = stream$
         .subscribe(value => {
@@ -62,7 +62,7 @@ export class AppComponent {
         this.Reset();
       }
       this.click = 0;
-    }, 250);
+    }, 300);
   }
 
   Reset(){
